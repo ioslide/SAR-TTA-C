@@ -1,0 +1,6 @@
+method:
+  name: SRT_G
+  steps: 1
+  SRT_TTA:
+    lr: 0.00025
+    momentum: 0.9

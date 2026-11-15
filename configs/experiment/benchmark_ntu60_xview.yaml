@@ -1,0 +1,26 @@
+experiment:
+  name: benchmark_ntu60_xview
+  mode: benchmark_continual
+  conda_env: sar-tta-c
+  source_model: ProtoGCN
+  source_config: configs/ntu60_xview/j_tta_bs32.py
+  checkpoint: checkpoints/ntu60_xview/best_top1_acc_epoch_149.pth
+  methods:
+  - Source
+  - BN
+  - Tent
+  - ETA
+  - EATA
+  - CoTTA
+  - RoTTA
+  - RDumb
+  - DeYO
+  - NEO
+  - ZeroSiam
+  - SkeletonCacheUniform
+  - SRT_TTA_paper
+  batch_size: 32
+  severity: 5
+  seed: 42
+  protocol: tta_cross_corruption
+  notes: NTU60 xview Skeleton-C v2 severity-5 continual benchmark

@@ -1,0 +1,10 @@
+dataset:
+  name: ntu120_xsub
+  split: xsub_val
+  num_classes: 120
+  data_root: data/nturgbd
+  ann_file: data/nturgbd/ntu120_3danno.pkl
+  offline_corruption_dir: data/nturgbd/ntu120_corruptions_v2_xsub
+  offline_corruption_severity: 5
+  offline_corruption_seed: 42
+  modality: j

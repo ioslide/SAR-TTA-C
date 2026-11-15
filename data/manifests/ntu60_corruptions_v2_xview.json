@@ -1,0 +1,341 @@
+{
+  "dataset": "NTU60-C",
+  "source": "ntu60_3danno.pkl",
+  "split": "xview_val",
+  "num_classes": 60,
+  "samples": 18932,
+  "severity": 5,
+  "seed": 42,
+  "corruption_order": [
+    "segment_dropout",
+    "segment_shuffle",
+    "temporal_delay",
+    "temporal_reverse",
+    "camera_viewpoint",
+    "nonrigid_joint_drift",
+    "coordinate_quantization",
+    "skeleton_mirror",
+    "persistent_joint_missing",
+    "joint_dropout_burst",
+    "identity_switch",
+    "left_right_asymmetry",
+    "joint_topology_swap",
+    "temporal_correlated_noise",
+    "outlier_frames",
+    "depth_axis_noise",
+    "high_frequency_jitter",
+    "mixed_failure"
+  ],
+  "transform_sha256": "7e3f0a2b3308bc6518e94dea017233a06a0264c9b06ca0789ada276306760031",
+  "domains": [
+    {
+      "name": "segment_dropout",
+      "index": "ntu60_3danno_corrupt_segment_dropout_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "segment_shuffle",
+      "index": "ntu60_3danno_corrupt_segment_shuffle_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "temporal_delay",
+      "index": "ntu60_3danno_corrupt_temporal_delay_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "temporal_reverse",
+      "index": "ntu60_3danno_corrupt_temporal_reverse_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "camera_viewpoint",
+      "index": "ntu60_3danno_corrupt_camera_viewpoint_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "nonrigid_joint_drift",
+      "index": "ntu60_3danno_corrupt_nonrigid_joint_drift_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "coordinate_quantization",
+      "index": "ntu60_3danno_corrupt_coordinate_quantization_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "skeleton_mirror",
+      "index": "ntu60_3danno_corrupt_skeleton_mirror_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "persistent_joint_missing",
+      "index": "ntu60_3danno_corrupt_persistent_joint_missing_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "joint_dropout_burst",
+      "index": "ntu60_3danno_corrupt_joint_dropout_burst_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "identity_switch",
+      "index": "ntu60_3danno_corrupt_identity_switch_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "left_right_asymmetry",
+      "index": "ntu60_3danno_corrupt_left_right_asymmetry_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "joint_topology_swap",
+      "index": "ntu60_3danno_corrupt_joint_topology_swap_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "temporal_correlated_noise",
+      "index": "ntu60_3danno_corrupt_temporal_correlated_noise_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "outlier_frames",
+      "index": "ntu60_3danno_corrupt_outlier_frames_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "depth_axis_noise",
+      "index": "ntu60_3danno_corrupt_depth_axis_noise_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "high_frequency_jitter",
+      "index": "ntu60_3danno_corrupt_high_frequency_jitter_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    },
+    {
+      "name": "mixed_failure",
+      "index": "ntu60_3danno_corrupt_mixed_failure_s5_seed42.pkl.mmap/index.json",
+      "samples": 18932,
+      "status": "generated",
+      "bytes": 277963650
+    }
+  ],
+  "files": [
+    {
+      "path": "ntu60_3danno_corrupt_segment_dropout_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277708,
+      "sha256": "fad9309bc46c256cd92e84f31826f948c14c6390346050f1bb6a1886a20e1b81"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_segment_dropout_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "b6475c522af6e6be545dbac1631ab125ef912091d170bae743e86fff3acc1cc0"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_segment_shuffle_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277708,
+      "sha256": "9201f7791a5700252e4eff724ad6ecb7632bb5bcc4dda59fa7348830d5551a9b"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_segment_shuffle_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "b61017eb70e7c430c42bf200dcb052e47bc402c22c081301683e32533f44584d"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_temporal_delay_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277707,
+      "sha256": "3bce8014bfd8e7511ade9c0dfc4d20c8b921b570e6c482afe3d51234f897a9b5"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_temporal_delay_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "8f8bdd6ff938b3b74790284c2e14bdfd84d686bcfd929f577d4abcbb1cf7a382"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_temporal_reverse_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277709,
+      "sha256": "8dd1825fde7f58c125ad10e0206257f72b52799b82b66df71f64130b230a79bc"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_temporal_reverse_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "15d8f3aae11f8dcbc22efc0c215ead3002292e4e0cc8a1198cf513a85efcbb01"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_camera_viewpoint_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277709,
+      "sha256": "c20d2c43f3e3d0941f7b04f535b83b26ccb0dd932df9b2dc002a41aa9edc00f8"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_camera_viewpoint_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "6b8dd090adcff36cb785103c38aed76c44bb852b2ae9480dd57c401b083b7f40"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_nonrigid_joint_drift_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277713,
+      "sha256": "f3fa911d126f8f2e65b779dbd55b93ca6dd4c0c55164286aeb9d5240b624ccaf"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_nonrigid_joint_drift_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "5e96b98c5d4f579d7d06f2250b3afa37f3e41e92e61de6cb4a7c04b47989838d"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_coordinate_quantization_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277716,
+      "sha256": "1aa9f7b4903acf2ec2f92627927c749eb26d3fe95bcff60c4fe817507d9ed564"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_coordinate_quantization_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "6c86998d6982feb3b34c2c53d86f79a331bd18beb2960afcd563ee97d94fe21c"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_skeleton_mirror_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277708,
+      "sha256": "f9ab76d820105811aa16393fbeeb08fdec0e68acdd057ebf66105d9dd1cbcfb5"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_skeleton_mirror_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "dec25c2e89ea40f90c8b22e220bf9c5ec74b309b048e7fd460fcb9718b2af708"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_persistent_joint_missing_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277717,
+      "sha256": "34100e4b7b1a197f107f90a83b2b48a7916ab05f66519fa9c9940ce951b92f10"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_persistent_joint_missing_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "385b6f7f94e03d0def283ee4b0f8a43b920ad5b23caf9410fcbf226963dcff31"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_joint_dropout_burst_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277712,
+      "sha256": "a74088e3313002e1c9f9d8d6eae895bccd7d9c0adb704b7b85959c7b462c5057"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_joint_dropout_burst_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "d8714245a6f3cb6612f9f2ea666047c051c990bfce4f3f4864da8fa7b9cd2d27"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_identity_switch_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277708,
+      "sha256": "984900e96b97abe02a85030ca4aa0f585338e178d1d1ad6aa2ad9ede041c3972"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_identity_switch_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "46188fd8feb040cb2e1a56799a1c8160a336f6d829ea5c8cf0e30b0c8be43320"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_left_right_asymmetry_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277713,
+      "sha256": "ee11dd1094b5e45a567f25f681c1f6c70e2ccf9aabc1a1d10278d640f68afc6d"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_left_right_asymmetry_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "dfd661f3863477503c1e8afff8303b07e623c96497430344f9f1d0935e800efe"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_joint_topology_swap_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277712,
+      "sha256": "a9a82386573b58ef9f347007ff67835f0c8aa3714b862a42fd739ddff04082db"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_joint_topology_swap_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "788815aa381066e872bd417d21fab16eb3b9f9ecececf2e873b24f4f719c1c75"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_temporal_correlated_noise_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277718,
+      "sha256": "5537bcb01540647a280e841f0f05c069116278e2416a397a01f9bd8e85b9d416"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_temporal_correlated_noise_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "775df6dfc93a3c92b98157b2de94f764442c405772d3d926e0d91bf82729caf3"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_outlier_frames_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277707,
+      "sha256": "ada0d1c2360a0c03cfca6e09913f0b409d66b519a05a3bd822f032e3de59523c"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_outlier_frames_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "f723750eaca7e6604c5c9bde3a3c8e6db42a7061818cd454f08eb208bcf74286"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_depth_axis_noise_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277709,
+      "sha256": "7a6df0a6e6797534ee84357afc925a4bc9013ee45a091d24f8d5ca7b89ca7047"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_depth_axis_noise_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "77b5778368f76948c0ea3615cfa2dec2a595ea4a44c306528c578a8635d7a375"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_high_frequency_jitter_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277714,
+      "sha256": "f221018815d271680a55328c6e274009ac3a7406e20b89f9cf3ff29aa7fd1816"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_high_frequency_jitter_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "34be4fc8056f5ce59c06c90463d22ba398db014ea6b4e699b454c8d855bd190e"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_mixed_failure_s5_seed42.pkl.mmap/index.json",
+      "bytes": 3277706,
+      "sha256": "a796e87c4536ea76381562a4f6183b73ec338e946653fd1c2352f065c58495ea"
+    },
+    {
+      "path": "ntu60_3danno_corrupt_mixed_failure_s5_seed42.pkl.mmap/keypoints.dat",
+      "bytes": 277963650,
+      "sha256": "d6f8f9998e2b3d18fde0269609dff3d10229925b651d00d9a07bcbc009127d51"
+    }
+  ],
+  "release_generator_sha256": "121aa85b9d131e38fd800f9b12e6241acdc808b8b70fed2ec781ca11691a60ec"
+}

@@ -1,0 +1,10 @@
+# Python 3.8; install PyTorch and MMCV using the commands in README.md first.
+numpy==1.24.4
+scipy==1.10.1
+PyYAML==6.0.2
+einops==0.8.1
+fvcore==0.1.5.post20221221
+opencv-python==4.11.0.86
+pandas==1.2.3
+prettytable==3.11.0
+matplotlib==3.7.5

@@ -1,0 +1,11 @@
+method:
+  name: CoTTA
+  steps: 1
+  cotta:
+    lr: 1.0e-4
+    steps: 1
+    episodic: false
+    ema_momentum: 0.999
+    restore_prob: 0.01
+    aug_views: 4
+    noise_std: 0.01

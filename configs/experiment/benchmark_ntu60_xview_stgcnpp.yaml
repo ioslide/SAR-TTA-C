@@ -1,0 +1,25 @@
+experiment:
+  name: benchmark_ntu60_xview_stgcnpp
+  mode: benchmark_continual
+  conda_env: sar-tta-c
+  source_model: STGCNPP
+  source_config: configs/ntu60_xview/stgcnpp_tta_bs32.py
+  checkpoint: checkpoints/stgcnpp_xview/j.pth
+  methods:
+  - Source
+  - BN
+  - Tent
+  - ETA
+  - EATA
+  - CoTTA
+  - RoTTA
+  - RDumb
+  - DeYO
+  - NEO
+  - ZeroSiam
+  - SkeletonCacheUniform
+  - SRT_TTA_paper
+  batch_size: 32
+  severity: 5
+  seed: 42
+  protocol: tta_cross_corruption

@@ -1,0 +1,9 @@
+dataset:
+  name: ntu60_skeleton_c_v2
+  split: xsub_val
+  data_root: data/nturgbd
+  ann_file: data/nturgbd/ntu60_3danno.pkl
+  offline_corruption_dir: data/nturgbd/ntu60_corruptions_v2
+  offline_corruption_severity: 5
+  offline_corruption_seed: 42
+  modality: j

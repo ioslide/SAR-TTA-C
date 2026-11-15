@@ -1,0 +1,5 @@
+method:
+  name: ZeroSiam
+  zerosiam:
+    lr: 2.5e-4
+    momentum: 0.9

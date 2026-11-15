@@ -1,0 +1,19 @@
+method:
+  name: EATA
+  steps: 1
+  bn:
+    eps: 1.0e-5
+    momentum: 0.1
+    reset_stats: false
+    no_stats: false
+  tent:
+    lr: 1.0e-4
+    steps: 1
+    episodic: false
+  eata:
+    lr: 1.0e-4
+    momentum: 0.9
+    steps: 1
+    episodic: false
+    margin_scale: 0.4
+    redundancy_margin: 0.05

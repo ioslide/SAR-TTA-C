@@ -1,0 +1,45 @@
+{
+  "format": "state_dict_only",
+  "models": [
+    {
+      "file": "checkpoints/ntu60_xsub/best_top1_acc_epoch_149.pth",
+      "source": "https://huggingface.co/firework8/ProtoGCN",
+      "original_sha256": "fdfb3cebf628c997921518f6ff897d8195a1e1310152c7ebd26613dff623dc5e",
+      "release_sha256": "f7929bdcacbe0508600702bda74fbd59f4ad12568d47f15d18df0e4bca684afe",
+      "bytes": 17769003,
+      "tensors": 843
+    },
+    {
+      "file": "checkpoints/ntu60_xview/best_top1_acc_epoch_149.pth",
+      "source": "https://huggingface.co/firework8/ProtoGCN",
+      "original_sha256": "8abd9ef6b42a1e190b97a8eee556596014c0aa2714d76bffe7f3d8342084837f",
+      "release_sha256": "f3816b2485a74147b924739e9de7078d4048b85f7f2e2dc26f617115d0071112",
+      "bytes": 17769003,
+      "tensors": 843
+    },
+    {
+      "file": "checkpoints/ntu120_xsub/best_top1_acc_epoch_141.pth",
+      "source": "https://huggingface.co/firework8/ProtoGCN/resolve/main/ntu120_xsub/j_1/best_top1_acc_epoch_141.pth",
+      "original_sha256": "42bb9554a189ab3856da8a9ab92ac4cbf0dc307c868d242c1f77ca1853f1944a",
+      "release_sha256": "7b62c9ca518fada0d19b4958aff2fb370451272df7aff04e3dd2bad8e748231a",
+      "bytes": 17861419,
+      "tensors": 843
+    },
+    {
+      "file": "checkpoints/stgcnpp_xview/j.pth",
+      "source": "https://download.openmmlab.com/mmaction/pyskl/ckpt/stgcnpp/stgcnpp_ntu60_xview_3dkp/j.pth",
+      "original_sha256": "05990febe4a21fa65e9b686f3b05e92137b8b06e1776214260b9e96272db811b",
+      "release_sha256": "3f4d8deb532e15358c130ef1aa5322fd8c6e1e379e86a38288e07e688e51ce06",
+      "bytes": 5894681,
+      "tensors": 692
+    },
+    {
+      "file": "checkpoints/ctrgcn_xview/j.pth",
+      "source": "https://download.openmmlab.com/mmaction/pyskl/ckpt/ctrgcn/ctrgcn_pyskl_ntu60_xview_3dkp/j.pth",
+      "original_sha256": "e958daf06c3c476c3920a54bc0c16aadb83cd5b82797bbb16786fc339070743b",
+      "release_sha256": "cf1a5a0484d457c68eb50ae5d9e22f0ffb3db71d206b211b615dafb199635f71",
+      "bytes": 6120019,
+      "tensors": 823
+    }
+  ]
+}

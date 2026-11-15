@@ -1,0 +1,6 @@
+method:
+  name: RDumb
+  rdumb:
+    lr: 2.5e-4
+    momentum: 0.9
+    reset_interval: 1000

@@ -1,0 +1,6 @@
+method:
+  name: SkeletonCacheUniform
+  skeleton_cache:
+    capacity: 8
+    alpha: 1.0
+    beta: 5.0

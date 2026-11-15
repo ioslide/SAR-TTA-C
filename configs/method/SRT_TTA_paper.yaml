@@ -1,0 +1,6 @@
+method:
+  name: SRT_TTA_paper
+  steps: 1
+  SRT_TTA:
+    lr: 0.00025
+    momentum: 0.9

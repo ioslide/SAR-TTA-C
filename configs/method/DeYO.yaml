@@ -1,0 +1,15 @@
+method:
+  name: DeYO
+  steps: 1
+  deyo:
+    lr: 1.0e-4
+    steps: 1
+    episodic: false
+    margin_scale: 0.4
+    margin_e0_scale: 0.4
+    plpd_threshold: 0.0
+    reweight_ent: true
+    reweight_plpd: true
+    aug_type: shuffle
+    noise_std: 0.01
+    skip_keywords: []
