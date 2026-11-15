@@ -1,8 +1,6 @@
 <div align="center">
 
-# 🦴 SAR-TTA-C
-
-### When the Sensor Stays Broken<br>Test-Time Robust Skeleton-Based Action Recognition
+# When the Sensor Stays Broken<br>Test-Time Robust Skeleton-Based Action Recognition
 
 **SRT · NTU60-C · NTU120-C**
 
