@@ -26,10 +26,12 @@ Anonymous code and benchmark release.
 
 ## 📊 Benchmarks
 
-| Benchmark | Split | Sequences per domain | Corruptions |
-|:---|:---:|---:|:---|
-| **NTU60-C** | X-View | 18,932 | 17 individual + auxiliary Mixed |
-| **NTU120-C** | X-Sub | 50,919 | 17 individual |
+| Benchmark | Split | Sequences per domain | Corruptions | Download |
+|:---|:---:|---:|:---|:---:|
+| **NTU60-C** | X-View | 18,932 | 17 individual + auxiliary Mixed | Upon acceptance |
+| **NTU120-C** | X-Sub | 50,919 | 17 individual | Upon acceptance |
+
+> 📥 **Dataset downloads:** Public download links for NTU60-C and NTU120-C will be released upon paper acceptance. The [generation scripts](scripts/prepare_ntu120c.py) and [file manifests](data/manifests/) are available in this anonymous repository.
 
 Main results average the 17 individual corruptions. NTU60-C recurring streams include Mixed and retain adaptation state throughout the stream.
 
@@ -83,7 +85,7 @@ python scripts/summarize.py outputs
 
 ## 📦 Data & Checkpoints
 
-Download the dataset parts, checkpoints, and checksum files from the [release assets](../../releases/tag/v1.0.0) into `release_assets/`. Full data are distributed separately from the source code.
+See the [data guide](data/README.md) to generate the benchmarks from official annotations. Public download links for prepared datasets and checkpoints will be provided upon paper acceptance. When using prepared archives, place them and their checksum files in `release_assets/`.
 
 <details>
 <summary><b>🔐 Verify and extract the downloads</b></summary>
