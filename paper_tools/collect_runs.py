@@ -169,7 +169,7 @@ def downsample(x, ys, n=400):
 
 
 def stream_curve(run, rounds, with_hpi=False):
-    """Per-batch accuracy (and marginal entropy) over the first `rounds` rounds, x in rounds."""
+    """Per-batch accuracy (and marginal entropy) over the first `rounds` windows, x in processed mini-batches."""
     accs, sizes = [], []
     for rnd, d, tag, z in iterate_stream(run, rounds):
         a = batch_accuracy(z)
@@ -181,7 +181,7 @@ def stream_curve(run, rounds, with_hpi=False):
         return None
     acc = np.concatenate(accs)
     per_round = sum(sizes[:len(CORRUPTIONS)])
-    x = np.arange(len(acc)) / per_round
+    x = np.arange(1, len(acc) + 1)
     out = {'x': x, 'acc': smooth(acc, max(1, per_round // 40))}
     if with_hpi:
         _, hpi = marginal_trajectory(run, rounds, per_batch=True)
@@ -304,7 +304,7 @@ def collect(args):
         accs = [run.round_acc(r) for r in range(n_done)]
         ends, _ = marginal_trajectory(run, n_done)
         res['long'][k] = {'rounds': min(run.rounds, args.rounds), 'complete_rounds': n_done, 'acc': accs,
-                          'round_mean': [mean_or_none(a[:-1]) for a in accs],
+                          'round_mean': [mean_or_none(a) for a in accs],
                           'hpi_round_end': [e[0] for e in ends]}
         if k not in res['single']:                  # round 0 of a recurring run = a single pass
             entry = summarize_single(run, 0)

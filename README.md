@@ -43,6 +43,9 @@ bash run.sh main60 --plan
 bash run.sh main60
 bash run.sh main120
 
+# Auxiliary Mixed result, after the 17 individual NTU60-C domains.
+bash run.sh mixed
+
 # SRT over the three reported evaluation seeds.
 bash run.sh main60 --methods SRT_TTA_paper --seeds 42 43 44
 bash run.sh main120 --methods SRT_TTA_paper --seeds 42 43 44
@@ -52,6 +55,8 @@ bash run.sh long
 
 # Additional experiments; each command selects one group.
 bash run.sh ablation
+bash run.sh ablation-long
+bash run.sh gap
 bash run.sh orientation
 bash run.sh sensitivity
 bash run.sh intervention
@@ -69,21 +74,22 @@ bash run.sh cost
 
 | Group | Evaluation |
 |---|---|
-| `main60` | NTU60-C, X-View, one pass through the fixed 18-domain sequence; primary mean excludes Mixed |
+| `main60` | NTU60-C, X-View, one pass through the fixed 17-domain sequence |
 | `main120` | NTU120-C, X-Sub, one pass through 17 individual domains |
-| `long` | NTU60-C recurring stream, 159,840 mini-batch time steps by default |
-| `ablation`, `orientation`, `sensitivity`, `intervention` | Component, orientation, parameter, and intervention studies |
+| `mixed` | Auxiliary NTU60-C result, with Mixed appended after the 17 individual domains |
+| `long` | NTU60-C recurring stream, up to 159,840 mini-batch time steps |
+| `ablation`, `ablation-long`, `orientation`, `sensitivity`, `intervention` | Component, orientation, parameter, and intervention studies |
 | `heldout` | Clean-input roll90, roll180, and roll180 with time reversal |
 | `real` | NTU60 to PKU-MMD, 50 shared action classes, full 60-way classifier |
 | `backbone` | ST-GCN++, CTR-GCN, and ProtoGCN X-Sub recurring evaluations |
-| `theory`, `vote`, `dwell`, `plugin` | Gradient diagnostics, frozen-source votes, persistence scans, and ATC transfer |
+| `theory`, `gap`, `vote`, `dwell`, `plugin` | Gradient diagnostics, frozen-source votes, persistence scans, and ATC transfer |
 | `cost` | One complete segment-dropout domain per method, including measured FLOPs |
 
 ## Evaluation protocol
 
 Batch size is 32; each skeleton is sampled to 100 frames with one test clip. Corruptions use profile v2, severity 5, and generation seed 42. Evaluation seeds control the evaluation pipeline independently of dataset generation. Domains follow `core/runtime.py`; adapters retain their state across domain boundaries. Target labels are used by the evaluator, not supplied to adaptation methods.
 
-NTU60-C contains 18,932 clips per domain (592 mini-batches); NTU120-C contains 50,919 (1,592 mini-batches). The primary tables average the 17 individual domains. Mixed is an auxiliary NTU60-C domain and remains in its recurring adaptation stream. One complete 18-domain NTU60-C traversal has 10,656 time steps. The compatibility option `--rounds 15` specifies 15 such traversals, or 159,840 time steps. Source is evaluated once because its state remains fixed. Learned and cache-based adapters keep state throughout the recurring stream.
+NTU60-C contains 18,932 clips per domain (592 mini-batches, or 10,064 time steps for 17 domains); NTU120-C contains 50,919 (1,592 mini-batches). The primary tables average the 17 individual domains; recurring-window means average all 18 segments, including Mixed. Mixed is also reported as an auxiliary NTU60-C result. One complete 18-domain NTU60-C traversal has 10,656 time steps. The compatibility option `--rounds 15` specifies 15 such traversals, or 159,840 time steps. Source is evaluated once because its state remains fixed. Learned and cache-based adapters keep state throughout the recurring stream. The existing early-stop rule ends collapsed runs after three consecutive windows below 5% mean accuracy; the last completed window is retained. ETA is run to the full horizon. Pass `--no-early-stop` to force all non-Source methods to complete every requested window.
 
 | SRT setting | NTU60-C | NTU120-C |
 |---|---:|---:|
@@ -97,7 +103,7 @@ NTU60-C contains 18,932 clips per domain (592 mini-batches); NTU120-C contains 5
 
 The launcher selects these settings explicitly. `SRT` is an alias for `SRT_TTA_paper`; `Skeleton-Cache` is an alias for `SkeletonCacheUniform`. The Skeleton-Cache baseline is a causal closed-set port with uniform descriptor fusion on the same classifier. Its parameters remain frozen, while its feature cache changes with the stream.
 
-Measurements and traces are written beneath `outputs/`. Run `python scripts/summarize.py outputs` to print completed 17-domain means and sample standard deviations across seeds; Mixed is listed separately. Raw runner CSV files retain the full evaluated domain sequence. SRT retains the compatibility instrumentation variables `ASTRA_TIME_DIM` (default 2) and `ASTRA_TRACE` (default 1). Keep the defaults for reproduction. `EVAL_CACHE_DIR` selects the disk cache for deterministic evaluation inputs; cached inputs are memory mapped. `SKIP_PKL=1` avoids redundant prediction pickle files while preserving stream measurements.
+Measurements and traces are written beneath `outputs/`. Run `python scripts/summarize.py outputs` to print completed means and sample standard deviations across seeds: 17 domains for primary results, 18 for recurring and backbone windows. Mixed is also listed separately. Raw runner CSV files retain the full evaluated domain sequence. SRT retains the compatibility instrumentation variables `ASTRA_TIME_DIM` (default 2) and `ASTRA_TRACE` (default 1). Keep the defaults for reproduction. `EVAL_CACHE_DIR` selects the disk cache for deterministic evaluation inputs; cached inputs are memory mapped. `SKIP_PKL=1` avoids redundant prediction pickle files while preserving stream measurements.
 
 The cost group records elapsed GPU time, peak allocated memory, and convolution/matrix-multiplication FLOPs for actual forward and backward operations. One multiply-add counts as two FLOPs. This is an operator-scoped measurement, not a count of every elementary operation. Measurements depend on hardware and software versions.
 
