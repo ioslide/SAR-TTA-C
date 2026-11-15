@@ -20,15 +20,16 @@ Run commands from the repository root. ProtoGCN is included in `protogcn/`; PYSK
 
 ## Data and checkpoints
 
-Download the dataset parts and `checkpoints.tar.gz` from the accompanying release assets. Extract them in the repository root; the archives contain the required `data/nturgbd/` and `checkpoints/` paths. The code repository contains metadata and generators; the full arrays are distributed separately.
+Download the dataset parts and `checkpoints.tar.gz` from the accompanying release assets. Place downloads in `release_assets/` and extract them in the repository root; the archives contain the required `data/nturgbd/` and `checkpoints/` paths. The code repository contains metadata and generators; the full arrays are distributed separately.
 
 ```bash
-# Run checksum verification where the downloaded assets are stored.
-sha256sum -c ntu60_corruptions_v2_xview.tar.gz.SHA256SUMS
-cat ntu60_corruptions_v2_xview.tar.gz.part* | tar -xz
-sha256sum -c ntu120_corruptions_v2_xsub.tar.gz.SHA256SUMS
-cat ntu120_corruptions_v2_xsub.tar.gz.part* | tar -xz
-tar -xzf checkpoints.tar.gz
+# Run these commands from the repository root.
+(cd release_assets && sha256sum -c ntu60_corruptions_v2_xview.tar.gz.SHA256SUMS)
+cat release_assets/ntu60_corruptions_v2_xview.tar.gz.part* | tar -xz
+(cd release_assets && sha256sum -c ntu120_corruptions_v2_xsub.tar.gz.SHA256SUMS)
+cat release_assets/ntu120_corruptions_v2_xsub.tar.gz.part* | tar -xz
+(cd release_assets && sha256sum -c checkpoints.tar.gz.SHA256SUMS)
+tar -xzf release_assets/checkpoints.tar.gz
 ```
 
 See [the data card](data/README.md) for formats, generation, official data sources, and usage terms; see [checkpoint provenance](checkpoints_manifest.json) for the evaluated weights. Prepared corruption arrays suffice for the main evaluations; the clean source annotations are needed for regeneration and clean-input held-out transformations.
